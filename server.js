@@ -15,9 +15,9 @@ connectDB();
 
 app.use("/api/todos", auth, todos);
 app.use("/api/user", users);
-app.get("/", (req, res) => res.send("Welcome to the Users API!"));
+app.get("/", (req, res) => res.send("Hello world"));
 app.all("*", (req, res) =>
-  res.send("You've tried reaching a route that doesn't exist.")
+  res.send("Sorry, the route you are going to does not exist")
 );
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
