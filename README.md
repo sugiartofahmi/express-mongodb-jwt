@@ -19,10 +19,10 @@
 ```
 ## Setup
 
-- ENV 
+ENV 
 
-  1. rename .env-example to .env
-  2. change value on env
+  - rename .env-example to .env
+  - change value on env
     `PORT, DB_URL and JWT_SECRET`
 
   example :
