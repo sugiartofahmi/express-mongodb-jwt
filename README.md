@@ -19,16 +19,22 @@
 ```
 ## Setup
 
-ENV 
+- ENV 
 
-  - rename .env-example to .env
-  - change value on env
+  1. rename .env-example to .env
+  2. change value on env
     `PORT, DB_URL and JWT_SECRET`
 
   example :
+
     ```bash
-    PORT = 9000
-    DB_URL = mongodb+srv://<username>:<password>@cluster0.8lcu8fs.mongodb.net/mybd/?retryWrites=true&w=majority
-    JWT_SECRET = afgkldhdbnwu3gdh2639hfn2b 
+      PORT = 9000 
     ```
-    
+
+    ```bash
+      DB_URL = mongodb+srv://<userbane>:<password>@cluster0.8lcu8fs.mongodb.net/?retryWrites=true&w=majority
+    ```
+
+    ```bash 
+      JWT_SECRET = afgkldhdbnwu3gdh2639hfn2b 
+    ```
