@@ -1,8 +1,11 @@
 import Todos from "../models/todos.js";
-
+import Users from "../models/users.js";
 export const getTodos = async (req, res) => {
   try {
-    const todos = await Todos.find();
+    const todos = await Todos.find({ user: req.user.id }).populate(
+      "user",
+      "name"
+    );
     res.status(200).json({
       message: "success",
       data: todos,
@@ -15,7 +18,10 @@ export const getTodos = async (req, res) => {
 
 export const createTodo = async (req, res) => {
   try {
-    const todo = await Todos.create(req.body);
+    const todo = await Todos.create({
+      todo: req.body.todo,
+      user: req.user.id,
+    });
     res.status(200).json({
       message: "success",
       data: todo,
